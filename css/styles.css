@@ -1,0 +1,189 @@
+/*font-family: 'Outfit', sans-serif;*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-BG: hsl(217, 54%, 11%);
+  --card-BG: hsl(216, 50%, 16%);
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --darkblue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --card-cyan: hsla(178, 100%, 50%, 0.5);
+}
+
+html {
+  font-family: 'Outfit', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--main-BG);
+  color: var(--Soft-blue);
+  min-height: 100vh;
+  padding: 25px;
+  font-weight: 300;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* NFT Card */
+.card {
+  background-color: var(--card-BG);
+  max-width: 22rem;
+  margin: 9rem auto;
+  padding: 1.5rem 1.6rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 20px 25px 12px rgba(0, 0, 0, 0.5), 0px 45px 30px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+}
+
+.card-image div {
+  background-color: var(--card-cyan);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.25s ease;
+  border-radius: 0.5rem;
+}
+
+.card-image div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.main-image {
+  width: 100%;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.main-image div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Card Title and Description */
+.card-body {
+  padding: 23px 0;
+  border-bottom: 1px solid var(--darkblue-line);
+  margin-bottom: 15px;
+}
+
+.card-heading {
+  color: var(--White);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card-heading:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.card-description {
+  font-size: 18px;
+  letter-spacing: 0.0075rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.card-body .card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-info {
+  margin: 1rem 0 1.4rem;
+}
+
+.card-price .card-timeleft {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.card-price {
+  color: var(--Cyan);
+}
+
+.card-icon {
+  margin-right: 0.5rem;
+}
+
+/* Creator Info*/
+.creator-info {
+  display: flex;
+  padding-top: 1rem;
+  align-items: center;
+}
+
+.pic {
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  width: 2rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.card-author-name {
+  font-weight: 500;
+}
+
+.author {
+  color: var(--White);
+  font-weight: 400;
+}
+
+.author:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+/* Footer Section*/
+.my-links {
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link1 {
+  color: var(--White);
+}
+
+.link1:hover {
+  color: var(--Cyan);
+}
+
+.link2 {
+  color: var(--White);
+}
+
+.link2:hover {
+  color: var(--Cyan);
+}
